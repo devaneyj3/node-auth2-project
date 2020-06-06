@@ -9,11 +9,11 @@ module.exports = {
 
 //POST A PERSON TO BE ADMIN 
 function PostAdmin(body) {
-    return db('admin').insert(body)
+    return db('users').insert(body)
 }
 
 function findAdmin(username) {
-    return db('admin').where({ username }).first();
+    return db('users').where({ username }).first();
 }
 
 function getUsers() {
